@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta name="description" content="Zhijing Wu's Personal Website" />
+        <meta name="keywords" content="Zhijing Wu, Jimmy, MIT, students" />
+        <meta name="author" content="Zhijing Wu" />
+        <link rel="icon" href="favicon.ico">
+        <title>Zhijing Wu's Website</title>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+        <!-- Animation -->
+        <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+        <!-- Owl Carousel -->
+        <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+        <!-- Light Case -->
+        <link rel="stylesheet" href="css/lightcase.min.css" type="text/css">
+        <!-- Template style -->
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+    </head>
+    <body>
+        <!-- preloader -->
+        <div id="preloader">
+            <div id="preloader-circle">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <!-- /preloader -->
+
+        <div class="wrapper-page">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-content">
+                    <div class="profile-picture-block">
+                        <div class="my-photo">
+                            <img src="http://via.placeholder.com/80x80" class="img-fluid" alt="image">
+                        </div>
+                    </div>
+                    <!-- Header Head -->
+                    <div class="site-title-block">
+                        <div class="site-title">Zhijing Wu</div>
+                        <div class="type-wrap">
+                            <div class="typed-strings">
+                                <span>Phillips Exeter Academy Student</span>
+                                <span>USAMO Qualifier</span>
+                                <span>AIME top competitor</span>
+                                <span>Computer Science Enthusiast</span>
+                            </div>
+                            <span class="typed"></span>
+                        </div>
+                    </div>
+                    <!-- /Header Head -->
+
+                    <!-- Navigation -->
+                    <div class="site-nav">
+                        <!-- Main menu -->
+                        <ul class="header-main-menu" id="header-main-menu">
+                            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                            <li><a href="index.html#about-me"><i class="fas fa-user-tie"></i> About Me</a></li>
+                            <li><a class="active"><i class="fas fa-user-tie"></i> Summer 2021</a></li>
+                            <li><a href="resume.pdf"><i class="fas fa-award"></i> Resume</a></li>
+                        </ul> 
+                        <!-- /Main menu -->
+                        <!-- Copyrights -->
+                        <div class="copyrights">© 2019 All rights reserved.</div>
+                        <!-- / Copyrights -->
+                    </div>
+                    <!-- /Navigation -->
+                </div>
+            </header>
+            <!-- /Header -->
+
+            <!-- Mobile Header -->
+            <div class="responsive-header">
+                <div class="responsive-header-name">
+                    <img class="responsive-logo" src="http://via.placeholder.com/30x30" alt="" />
+                    Zhijing Wu
+                </div> 
+                <span class="responsive-icon"><i class="lnr lnr-menu"></i></span>
+            </div>
+            <!-- /Mobile Header -->
+
+            <!-- Main Content Pages -->
+            <div class="content-pages">
+                <!-- Subpages -->
+                <div class="sub-home-pages">
+                    <!-- Titlebar -->
+                    <div id="titlebar">
+                        <div class="container">
+                            <div class="special-block-bg">
+                                <h2>Software Engineering Internship</h2>
+                                <!-- Breadcrumbs -->
+                                <nav id="breadcrumbs">
+                                    <ul>
+                                        <li><a href="#">Experience</a></li>
+                                        <li>Summer 2021</li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Titlebar -->
+
+                    <!-- Content -->
+                    <div class="container">
+                        <!-- Blog Posts -->
+                        <div class="blog-page">
+                            <div class="row">
+                                <!-- Post Content -->
+                                <div class="col-lg-12 col-md-12">
+                                    <!-- Blog Post -->
+                                    <div class="blog-post single-post">
+                                        <!-- Img -->
+                                        <img class="post-img" src="img/head.png" alt="">
+                                        <!-- Content -->
+                                        <div class="post-content">
+                                            <h3>Software Engineering Experience</h3>
+                                            <ul class="post-meta">
+                                                <li><a href="#"><i class="lnr lnr-user"></i> Jimmy</a></li>
+                                                <li><i class="lnr lnr-history"></i> September 2021</li>
+                                            </ul>
+                                            <p> This summer I worked on the implementation of the internal students and teachers management system. It was a big pleasure for me to work with 4Schoolers Engineers to implement the architecture of the application. I helped to implement an internal management system for parents as well as wrote automation scripts for django framework. In addition, I could merge existing databases, implement backend infrastructure, and create UI for parents and managers. I received the following feedback from the management:</p>
+                                            <div class="post-quote">
+                                                <span class="icon"></span>
+                                                <blockquote>
+                                                    Zhijing helped us to implement an internal management system for parents. With his help, we could merge existing databases, implement backend infrastructure, and create UI for parents and managers. His strong desire to learn and exceptional quantitative skills helped him to succeed with all of the projects he was assigned. As a part of our growth plan, we will be using the software that you developed for us and suggesting improvements if needed. We hope that you will consider working with us in Summer 2022.
+                                                </blockquote>
+                                            </div>
+                                            <p>This portal allows employees, managers, students of 4Schoolers and their parents to have lessons and take exams. Students can have classes and submit their works. Portal uses units based payment system to help students to have classes and teachers to give them.</p>
+                                            <p>In the very begining of the project, we created a UML diagram:</p>
+                                            <img src="img/uml.jpg" alt="">
+                                            <p>Once we created UML Design, I was responsible for creating ORM models using Django framework. Some of the classes used are:
+                                            <code>
+from django.db import models
+from django.contrib.auth.models import User
+from student.models import Student
+
+
+class Parent(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    child = models.OneToOneField(Student, on_delete=models.CASCADE)
+    phone = models.CharField(max_length=15,null=True, blank=True)
+
+    def __str__(self):
+        return self.user.get_full_name()
+                                            </code>
+                                            
+                                            Or similarly I created Student Model:
+
+                                            <code>
+Class Student(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    is_active = models.BooleanField(null=True, blank=True)
+
+    bio = models.CharField(max_length=215, null=True, blank=True)
+
+
+    birth_date = models.DateField(null=True, blank=True)
+    is_male = models.BooleanField(null=True, blank=True)
+    phone = models.CharField(max_length=15,null=True, blank=True)
+
+    image = models.ImageField(upload_to=user_image_path, null=True, blank = True, default = 'man.png')
+
+    languages = models.CharField(max_length=215,null=True, blank=True)
+    interests = models.CharField(max_length=215,null=True, blank=True)
+
+
+    school = models.CharField(max_length=63,null=True, blank=True)
+    graduation_year = models.IntegerField(null=True, blank=True)
+
+    address = models.CharField(max_length=100,null=True, blank=True)
+    city = models.CharField(max_length=50,null=True, blank=True)
+    zip_code = models.CharField(max_length=50,null=True, blank=True)
+    state  = models.CharField(max_length=50,null=True, blank=True)
+    country = models.CharField(max_length=50,null=True, blank=True)
+
+    def __str__(self):
+        return self.user.get_full_name()
+
+                                            </code>
+                                            </p>
+              
+                                        <p> Once we create ORM database and migrated all changes we started working on the implementation of the Django views. Some of the views that I implemented are below: 
+                                        <code>
+def validation_employee(func):
+
+     def validation(request, *args, **kwargs):
+         try:
+             employee = Employee.objects.get(user = request.user)
+             return func(request, *args, **kwargs)
+         except Exception as e:
+             auth.logout(request)
+             context = {'error': e}
+             return render(request, 'employee/404.jinja', context = context)
+     return validation
+
+def login(request):
+    context = {}
+    if (request.user.is_authenticated):
+        return redirect('employee_profile')
+
+    if (request.method == 'POST'):
+        if '@' in request.POST['login']:
+            email = request.POST.get('login')
+            password = request.POST.get('password')
+
+            try:
+                user = User.objects.get(email = email)
+            except:
+                context['invalid'] = True
+                return render(request, 'employee/login.jinja', context)
+
+            if (user.check_password(password)):
+                auth.login(request, user)
+                return redirect('employee_profile')
+            else:
+                context['invalid'] = True
+                return render(request, 'employee/login.jinja', context)
+        else:
+            username = request.POST.get('login')
+            password = request.POST.get('password')
+
+            try:
+                user = User.objects.get(username = username)
+            except:
+                context['invalid'] = True
+                return render(request, 'employee/login.jinja', context)
+
+            if (user.check_password(password)):
+                auth.login(request, user)
+                return redirect('employee_profile')
+            else:
+                context['invalid'] = True
+                return render(request, 'employee/login.jinja', context)
+
+    return render(request, 'employee/login.jinja', context)
+                                        </code>
+                                            Overall, I learnt a lot of different tools and tecnhiques in software engineering, including: Python, Django, JavaScript and HTML.  The whole project is available in my <a href = "https://github.com/wuzhijing0127/portal_api">github</a>.
+                                            
+                                        </p>
+                                        <img src="img/git.png">
+                                        </div>
+                                    </div>
+                                    <!-- Blog Post / End -->
+
+                    
+
+                                </div>
+                                <!-- Content / End -->
+                             
+                            </div>
+                      
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Main Content -->
+
+
+        <!--JS Files-->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!--Owl Coursel-->
+        <script src="js/owl.carousel.min.js"></script>
+        <!-- Typing Text -->
+        <script src="js/typed.min.js"></script> 
+        <!--Images LightCase-->
+        <script src="js/lightcase.min.js"></script>
+        <!-- Portfolio filter -->
+        <script src="js/jquery.isotope.min.js"></script>
+        <!-- Wow Animation -->
+        <script src="js/wow.min.js"></script>  
+        <!-- Main Script -->
+        <script src="js/script.js"></script>
+    </body>
+</html>
