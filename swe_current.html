@@ -59,8 +59,8 @@
                         <!-- Main menu -->
                         <ul class="header-main-menu" id="header-main-menu">
                             <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                            <li><a href="swe_current.html"><i class="fas fa-user-tie"></i> Current Research</a></li>              
-                            <li><a class="active"><i class="fas fa-user-tie"></i> Summer 2021</a></li>
+                            <li><a class="active"><i class="fas fa-user-tie"></i> Current Research</a></li>              
+                            <li><a href="swe.html"><i class="fas fa-user-tie"></i> Summer 2021</a></li>
                             <li><a href="swe_2020.html"><i class="fas fa-user-tie"></i> Summer 2020</a></li>                       
                             <li><a href="resume.pdf"><i class="fas fa-award"></i> Resume</a></li>
                         </ul> 
@@ -92,7 +92,7 @@
                     <div id="titlebar">
                         <div class="container">
                             <div class="special-block-bg">
-                                <h2>Software Engineering Internship</h2>
+                                <h2>Machine Learning Internship</h2>
                                 <!-- Breadcrumbs -->
                                 <nav id="breadcrumbs">
                                     <ul>
@@ -115,134 +115,34 @@
                                     <!-- Blog Post -->
                                     <div class="blog-post single-post">
                                         <!-- Img -->
-                                        <img class="post-img" src="img/head.png" alt="">
+                                        <img class="post-img" src="img/AI-ML.jpeg" alt="">
                                         <!-- Content -->
                                         <div class="post-content">
-                                            <h3>Software Engineering Experience</h3>
+                                            <h3>Machine Learning Experience</h3>
                                             <ul class="post-meta">
                                                 <li><a href="#"><i class="lnr lnr-user"></i> Jimmy</a></li>
                                                 <li><i class="lnr lnr-history"></i> September 2021</li>
                                             </ul>
-                                            <p> This summer I worked on the implementation of the internal students and teachers management system. It was a big pleasure for me to work with 4Schoolers Engineers to implement the architecture of the application. I helped to implement an internal management system for parents as well as wrote automation scripts for django framework. In addition, I could merge existing databases, implement backend infrastructure, and create UI for parents and managers. I received the following feedback from the management:</p>
+                                            <p> 
+                                                In September 2021, I’ve started developing (under supervision of with Dr. Alex Lukyanov, Scientific Director BISC Global) ML models as a part of the pipeline which provides a software as a medical device that is capable of analysis predicting healthy vs non-healthy status in psychiatry. This medical device captures different characteristics (specific symptoms) which, taken together, define significant attributes that can be used to eliminate healthy vs non-healthy patients, or continue with further diagnostics for the patients included into the high-risk group.      
+                                                It’s a very exciting multidisciplinary projects combining artificial intelligence / machine learning, computer science and computational psychiatry. My primary goal in this project is to understand the connection between different elements of challenging problems, and to develop approach which converges ML based learned models with model-based predictions so that all numerical and experimental data can help self-inform predictions. This allows effective building of UQ into a cognitive computing. 
+
+                                                In the current project, we investigate a novel technique for extracting self-organized features using deep neural networks. We expect that these extracted features could reflect individual’s brain states which are useful for the evaluation and treatment of psychiatric disorders. Particularly, we focus on the dimensional approach for psychiatric disorders, which attempts to find biological basis corresponding to observable behavioral and symptom measures, regardless of conventional categories of psychiatric disorder. 
+                                            </p>
                                             <div class="post-quote">
                                                 <span class="icon"></span>
                                                 <blockquote>
-                                                    Zhijing helped us to implement an internal management system for parents. With his help, we could merge existing databases, implement backend infrastructure, and create UI for parents and managers. His strong desire to learn and exceptional quantitative skills helped him to succeed with all of the projects he was assigned. As a part of our growth plan, we will be using the software that you developed for us and suggesting improvements if needed. We hope that you will consider working with us in Summer 2022.
+                                                    Zhijing is a talented young researcher who is helping us in developing technologies of examination and evaluation for psychiatric disorders based on computational psychiatry by developing machine learning capabilities. He is very dedicated to learn new things and very enthusiastic in pushing his boundaries to solve new challenging problems.
                                                 </blockquote>
                                             </div>
-                                            <p>This portal allows employees, managers, students of 4Schoolers and their parents to have lessons and take exams. Students can have classes and submit their works. Portal uses units based payment system to help students to have classes and teachers to give them.</p>
-                                            <p>In the very begining of the project, we created a UML diagram:</p>
-                                            <img src="img/uml.jpg" alt="">
-                                            <p>Once we created UML Design, I was responsible for creating ORM models using Django framework. Some of the classes used are:
-                                            <code>
-from django.db import models
-from django.contrib.auth.models import User
-from student.models import Student
-
-
-class Parent(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    child = models.OneToOneField(Student, on_delete=models.CASCADE)
-    phone = models.CharField(max_length=15,null=True, blank=True)
-
-    def __str__(self):
-        return self.user.get_full_name()
-                                            </code>
-                                            
-                                            Or similarly I created Student Model:
-
-                                            <code>
-Class Student(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    is_active = models.BooleanField(null=True, blank=True)
-
-    bio = models.CharField(max_length=215, null=True, blank=True)
-
-
-    birth_date = models.DateField(null=True, blank=True)
-    is_male = models.BooleanField(null=True, blank=True)
-    phone = models.CharField(max_length=15,null=True, blank=True)
-
-    image = models.ImageField(upload_to=user_image_path, null=True, blank = True, default = 'man.png')
-
-    languages = models.CharField(max_length=215,null=True, blank=True)
-    interests = models.CharField(max_length=215,null=True, blank=True)
-
-
-    school = models.CharField(max_length=63,null=True, blank=True)
-    graduation_year = models.IntegerField(null=True, blank=True)
-
-    address = models.CharField(max_length=100,null=True, blank=True)
-    city = models.CharField(max_length=50,null=True, blank=True)
-    zip_code = models.CharField(max_length=50,null=True, blank=True)
-    state  = models.CharField(max_length=50,null=True, blank=True)
-    country = models.CharField(max_length=50,null=True, blank=True)
-
-    def __str__(self):
-        return self.user.get_full_name()
-
-                                            </code>
+                                            <p>
+                                                The proposed technique could be one of the base technologies of examination and evaluation for psychiatric disorders based on computational psychiatry (computational assay).
                                             </p>
-              
-                                        <p> Once we create ORM database and migrated all changes we started working on the implementation of the Django views. Some of the views that I implemented are below: 
-                                        <code>
-def validation_employee(func):
-
-     def validation(request, *args, **kwargs):
-         try:
-             employee = Employee.objects.get(user = request.user)
-             return func(request, *args, **kwargs)
-         except Exception as e:
-             auth.logout(request)
-             context = {'error': e}
-             return render(request, 'employee/404.jinja', context = context)
-     return validation
-
-def login(request):
-    context = {}
-    if (request.user.is_authenticated):
-        return redirect('employee_profile')
-
-    if (request.method == 'POST'):
-        if '@' in request.POST['login']:
-            email = request.POST.get('login')
-            password = request.POST.get('password')
-
-            try:
-                user = User.objects.get(email = email)
-            except:
-                context['invalid'] = True
-                return render(request, 'employee/login.jinja', context)
-
-            if (user.check_password(password)):
-                auth.login(request, user)
-                return redirect('employee_profile')
-            else:
-                context['invalid'] = True
-                return render(request, 'employee/login.jinja', context)
-        else:
-            username = request.POST.get('login')
-            password = request.POST.get('password')
-
-            try:
-                user = User.objects.get(username = username)
-            except:
-                context['invalid'] = True
-                return render(request, 'employee/login.jinja', context)
-
-            if (user.check_password(password)):
-                auth.login(request, user)
-                return redirect('employee_profile')
-            else:
-                context['invalid'] = True
-                return render(request, 'employee/login.jinja', context)
-
-    return render(request, 'employee/login.jinja', context)
-                                        </code>
-                                            Overall, I learnt a lot of different tools and tecnhiques in software engineering, including: Python, Django, JavaScript and HTML.  The whole project is available in my <a href = "https://github.com/wuzhijing0127/portal_api">github</a>.
-                                            
-                                        </p>
-                                        <img src="img/git.png">
+                                            <p>The overall roadmap of the projects can be shown on the following figure:</p>
+                                            <img src="img/CurrentProject2021.jpeg" alt="">
+                                            <p>
+                                            At this moment, I am working on processing input data and developing necessary building blocks for machine learning computations. Stay tuned to get more info soon.       
+                                            </p>
                                         </div>
                                     </div>
                                     <!-- Blog Post / End -->
