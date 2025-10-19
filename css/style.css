@@ -3836,3 +3836,7 @@ blockquote {
         padding-left: 0;
     }
 }
+
+.content-bottom, .wrapper-page::after, .bottom-section, .black-bg {
+    background-color: #ffffff !important;
+}
