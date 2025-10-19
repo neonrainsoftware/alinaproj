@@ -42,14 +42,7 @@
                     <!-- Header Head -->
                     <div class="site-title-block">
                         <div class="site-title">Alina Letova</div>
-                        <div class="type-wrap">
-                            <div class="typed-strings">
-                                <span>Phillips Exeter Academy Student</span>
-                                <span>USAMO Qualifier</span>
-                                <span>AIME top competitor</span>
-                                <span>Computer Science Enthusiast</span>
-                            </div>
-                            <span class="typed"></span>
+                        
                         </div>
                     </div>
                     <!-- /Header Head -->
@@ -91,7 +84,7 @@
                     <div id="titlebar">
                         <div class="container">
                             <div class="special-block-bg">
-                                <h2>Software Engineering Internship</h2>
+                                <h2>What Shaped Me</h2>
                                 <!-- Breadcrumbs -->
                                 <nav id="breadcrumbs">
                                     <ul>
@@ -111,134 +104,32 @@
                             <div class="row">
                                 <!-- Post Content -->
                                 <div class="col-lg-12 col-md-12">
-                                    <!-- Blog Post -->
-                                    <div class="blog-post single-post">
-                                        <!-- Img -->
-                                        <img class="post-img" src="img/head.png" alt="">
-                                        <!-- Content -->
-                                        <div class="post-content">
-                                            <h3>Software Engineering Experience</h3>
-                                            <ul class="post-meta">
-                                                <li><a href="#"><i class="lnr lnr-user"></i> Jimmy</a></li>
-                                                <li><i class="lnr lnr-history"></i> September 2021</li>
-                                            </ul>
-                                            <p> This summer I worked on the implementation of the internal students and teachers management system. It was a big pleasure for me to work with 4Schoolers Engineers to implement the architecture of the application. I helped to implement an internal management system for parents as well as wrote automation scripts for django framework. In addition, I could merge existing databases, implement backend infrastructure, and create UI for parents and managers. I received the following feedback from the management:</p>
-                                            <div class="post-quote">
-                                                <span class="icon"></span>
-                                                <blockquote>
-                                                    Zhijing helped us to implement an internal management system for parents. With his help, we could merge existing databases, implement backend infrastructure, and create UI for parents and managers. His strong desire to learn and exceptional quantitative skills helped him to succeed with all of the projects he was assigned. As a part of our growth plan, we will be using the software that you developed for us and suggesting improvements if needed. We hope that you will consider working with us in Summer 2022.
-                                                </blockquote>
-                                            </div>
-                                            <p>This portal allows employees, managers, students of 4Schoolers and their parents to have lessons and take exams. Students can have classes and submit their works. Portal uses units based payment system to help students to have classes and teachers to give them.</p>
-                                            <p>In the very begining of the project, we created a UML diagram:</p>
-                                            <img src="img/uml.jpg" alt="">
-                                            <p>Once we created UML Design, I was responsible for creating ORM models using Django framework. Some of the classes used are:
-                                            <code>
-from django.db import models
-from django.contrib.auth.models import User
-from student.models import Student
+                                            On January 29th, 2025, my family and the worldwide sporting community experienced an unspeakable tragedy.
 
+Over the icy Potomac River, a passenger plane and a military helicopter collided in a fireball and tumbled down. Every new detail was more horrifying than the last. 
 
-class Parent(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    child = models.OneToOneField(Student, on_delete=models.CASCADE)
-    phone = models.CharField(max_length=15,null=True, blank=True)
+The airplane came from Wichita, Kansas. Oh my god, are my parents on this plane??? They were just at the National Championships, coaching the Olympic Development camp in Wichita!
 
-    def __str__(self):
-        return self.user.get_full_name()
-                                            </code>
-                                            
-                                            Or similarly I created Student Model:
+Several families on the plane were bound for Boston. It can't be…my home skating club…
 
-                                            <code>
-Class Student(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    is_active = models.BooleanField(null=True, blank=True)
+There were many children and parents on the plane. For hours and hours, the news said “No survivors YET.” Please let there be just one. Just one girl, someone, who miraculously swam out of the wreckage. One crazy air bubble to protect a survivor. 
 
-    bio = models.CharField(max_length=215, null=True, blank=True)
+I knew the skaters and coaches on the plane. I grew up with them. My parents devoted their lives to coaching and supporting them. Though my parents had booked a different return flight, a piece of our world was shattered forever.
 
+Eight months later, my life has taken on more purpose, and I am committed to ensuring the legacy of Flight AA5342's passengers will continue forever.
 
-    birth_date = models.DateField(null=True, blank=True)
-    is_male = models.BooleanField(null=True, blank=True)
-    phone = models.CharField(max_length=15,null=True, blank=True)
+In the immediate aftermath, I knew I needed to be with the victims' families. Every day for several weeks, I was either at the rink for hours sitting with Max, Joon, or fellow skaters, or at my house, where my parents and I hosted people too devastated to return to their regular routines. As an only child, Max had just lost both parents, Evgenia Shishkova and Vadim Naumov, the 1994 Pairs World Champions/1995 Olympics Silver Medalists. The Naumovs weren't just fellow coaches; they were some of my closest family friends. Joon was the bereaved widower of Jin, his wife, and father of Jinna Han, their only child, who had turned 13 just days before the crash. The Hans lived in the same town as me, and they often came over to our house. Our club also lost talented Spencer Lane and his mom Christine, who were only 16 and 49 years old.
 
-    image = models.ImageField(upload_to=user_image_path, null=True, blank = True, default = 'man.png')
+For the first 48 hours, the loss didn't even feel real, as I watched the news analyze the crash. Seeing national news play archival footage of competitions, or get little details about Jinna and Spencer wrong, made me feel dissociated. The massive amount of flowers and gifts coming from around the world was touching, reassuring me that they were loved. Still, I knew the skating community and families needed fundamentally more. At the age of 17, this was my first time attending a funeral, let alone several in a row. I participated in all the Skating Club of Boston services, even the private family ones, because these people were not just friends; they were truly family.
 
-    languages = models.CharField(max_length=215,null=True, blank=True)
-    interests = models.CharField(max_length=215,null=True, blank=True)
+After the official services concluded, the news cameras left, but we still needed to pick up the pieces and support the families–especially Joon and Max. They were both at our house frequently; my mom cooks for them, and they have our door code, so we truly have an open-door policy. Seeing my parents experience grief also changed my view of them, and my definition of “family.” The crash changed my parents' approach to coaching and parenting. 
 
+In addition to official US Figure Skating Association fundraisers, my parents and I hosted a GoFundMe for the Naumov and Han families. I shared the fundraiser with my school, and many classmates donated. I used my background in art and painting to make custom sneakers for fundraisers and auctions. I promoted these fundraisers for months, this year raising and donating approximately $10,000.
 
-    school = models.CharField(max_length=63,null=True, blank=True)
-    graduation_year = models.IntegerField(null=True, blank=True)
+The past year has shaped me profoundly by convincing me that I want to (1) dedicate my efforts to long-lasting memorials for these skaters' legacies; and (2) dedicate my education and career to helping people. From my long athletic career, I have an interest in healthcare, but I also enjoy using my art and communication skills for marketing and awareness. I plan to study nursing, healthcare, and business so that I can enter the health professions or become a wellness entrepreneur/educator, and explore which paths are best suited to me. 
 
-    address = models.CharField(max_length=100,null=True, blank=True)
-    city = models.CharField(max_length=50,null=True, blank=True)
-    zip_code = models.CharField(max_length=50,null=True, blank=True)
-    state  = models.CharField(max_length=50,null=True, blank=True)
-    country = models.CharField(max_length=50,null=True, blank=True)
+Wherever I attend college, I know I will keep the memory of Jinna's huge smile, Evgenia's affectionate nicknames for me, and Vadim's comforting presence. I will be inspired to keep advancing in my studies and fundraisers because they deserve to be remembered and celebrated forever. I will also connect with the local skating club, where I'll go to practice, teach, and clear my head. When I watch the 2026 Winter Olympics, I'll imagine how excited Jinna would be, cheering on her favorite skaters as they compete. While my community has borne this immeasurable loss, I will dedicate my life to uplifting their memories.  
 
-    def __str__(self):
-        return self.user.get_full_name()
-
-                                            </code>
-                                            </p>
-              
-                                        <p> Once we create ORM database and migrated all changes we started working on the implementation of the Django views. Some of the views that I implemented are below: 
-                                        <code>
-def validation_employee(func):
-
-     def validation(request, *args, **kwargs):
-         try:
-             employee = Employee.objects.get(user = request.user)
-             return func(request, *args, **kwargs)
-         except Exception as e:
-             auth.logout(request)
-             context = {'error': e}
-             return render(request, 'employee/404.jinja', context = context)
-     return validation
-
-def login(request):
-    context = {}
-    if (request.user.is_authenticated):
-        return redirect('employee_profile')
-
-    if (request.method == 'POST'):
-        if '@' in request.POST['login']:
-            email = request.POST.get('login')
-            password = request.POST.get('password')
-
-            try:
-                user = User.objects.get(email = email)
-            except:
-                context['invalid'] = True
-                return render(request, 'employee/login.jinja', context)
-
-            if (user.check_password(password)):
-                auth.login(request, user)
-                return redirect('employee_profile')
-            else:
-                context['invalid'] = True
-                return render(request, 'employee/login.jinja', context)
-        else:
-            username = request.POST.get('login')
-            password = request.POST.get('password')
-
-            try:
-                user = User.objects.get(username = username)
-            except:
-                context['invalid'] = True
-                return render(request, 'employee/login.jinja', context)
-
-            if (user.check_password(password)):
-                auth.login(request, user)
-                return redirect('employee_profile')
-            else:
-                context['invalid'] = True
-                return render(request, 'employee/login.jinja', context)
-
-    return render(request, 'employee/login.jinja', context)
-                                        </code>
-                                            Overall, I learnt a lot of different tools and tecnhiques in software engineering, including: Python, Django, JavaScript and HTML.  The whole project is available in my <a href = "https://github.com/wuzhijing0127/portal_api">github</a>.
                                             
                                         </p>
                                         <img src="img/git.png">
